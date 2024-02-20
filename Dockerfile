@@ -29,7 +29,7 @@ ENV THIRD_PARTY_WS  /workspaces/3rd_party_ws
 RUN mkdir -p $THIRD_PARTY_WS/src
 WORKDIR $THIRD_PARTY_WS
 # RUN --mount=type=ssh git clone -b ros2 git@github.com:fzi-forschungszentrum-informatik/cartesian_controllers.git $THIRD_PARTY_WS/src/cartesian_controllers
-# RUN --mount=type=ssh git clone -b humble git@github.com:ros-controls/gazebo_ros2_control.git $THIRD_PARTY_WS/src/gazebo_ros2_control
+RUN --mount=type=ssh git clone -b humble git@github.com:ros-controls/gazebo_ros2_control.git $THIRD_PARTY_WS/src/gazebo_ros2_control
 RUN --mount=type=ssh git clone -b humble git@github.com:UniversalRobots/Universal_Robots_ROS2_Gazebo_Simulation.git $THIRD_PARTY_WS/src/Universal_Robots_ROS2_Gazebo_Simulation
 RUN --mount=type=ssh git clone -b ros2 git@github.com:ros/urdf_tutorial.git $THIRD_PARTY_WS/src/urdf_tutorial
 
